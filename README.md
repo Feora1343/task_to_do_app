@@ -118,4 +118,4 @@ Breaking everything down into "less is more".
 - :black_square_button: Highlighting overdue task will highlight it in red :bangbang:**PRO**:bangbang:
 
 # Design Inspiration For Project
-(https://cdn.dribbble.com/users/374494/screenshots/3156085/to-do_app.png)
+![Inspiration](https://cdn.dribbble.com/users/374494/screenshots/3156085/to-do_app.png)
