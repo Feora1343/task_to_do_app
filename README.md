@@ -63,7 +63,7 @@ Breaking everything down into "less is more".
     |       1       |  Prime Class  |  Yes      |  02/15/18         | INSERT INTO cat   |
     |       2       |  Eat Dinner   |  No       |  02/15/18         | (pri) VALUES ('') |
     ```
-  - :black_square_button: Table `categories` created **HARD**
+  - :black_square_button: Table `categories` created :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
     ```
     | id            | priority      |
     | (primary key) | (low med hi)  |
@@ -71,7 +71,7 @@ Breaking everything down into "less is more".
     |      1        |  high         |
     |      2        |  low          |
     ```
-  - :black_square_button: Both tables work together as needed **HARD**
+  - :black_square_button: Both tables work together as needed :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
 
 ## Tasks
 - :black_square_button: Create overall organization of DOM
@@ -80,5 +80,26 @@ Breaking everything down into "less is more".
   - :black_square_button: There will need to be another container to hold tasks that are complete
   - :black_square_button: There will need to be a delete button
     - :black_square_button: Delete button removes task from the DOM and the database
+  - :black_square_button: There will need to be a complete button 
+    - :black_square_button: There will also need to be a remove completed tasks button
+
+- :black_square_button: AJAX POST sends new task to database
+  - :black_square_button: Clicking Add Task button sends value of input to databae
+  - :black_square_button: Clicking Add Task also runs function to refresh list/update
+- :black_square_button: AJAX GET requests tasks from the database
+  - :black_square_button: When page loads, it should always get tasks from database
+  - :black_square_button: JS Loop will be needed to create the list of tasks
+  - :black_square_button: Each task needs to have a complete and delete button
+    - :black_square_button: Each complete and delete button needs event listener
+- :black_square_button: AJAX PUT updates the tasks in the database as complete
+  - :black_square_button: The element will need a `data-id`
+  - :black_square_button: Clicking Complete Button will update the database
+  - :black_square_button: Clicking Complete Button will also run function to refresh the tasks list
+  - :black_square_button: Clicking Complete Button will also move the completed task to the completed task list & hide the complete button on that task
+- :black_square_button: AJAX DELETE deletes the task in the database
+  - :black_square_button: Clicking Delete Button will remove the task from the database
+  - :black_square_button: BUT will warn you, asking if you are sure you want to delete this task :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
+  - :black_square_button: Clicking Delete Butotn will run the function to refresh the task list
+- :black_square_button: AJAX PUT will update the task in the data as 
 
 
