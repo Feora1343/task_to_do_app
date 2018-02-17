@@ -65,7 +65,7 @@ Breaking everything down into "less is more".
     ```
   - :black_square_button: Table `categories` created :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
     ```
-    | id            | priority      |
+    | id            | category_id   |
     | (primary key) | (low med hi)  |
     |:-------------:|:-------------:|
     |      1        |  high         |
@@ -100,6 +100,21 @@ Breaking everything down into "less is more".
   - :black_square_button: Clicking Delete Button will remove the task from the database
   - :black_square_button: BUT will warn you, asking if you are sure you want to delete this task :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
   - :black_square_button: Clicking Delete Butotn will run the function to refresh the task list
-- :black_square_button: AJAX PUT will update the task in the data as 
+- :black_square_button: AJAX PUT will update the task in the data as incomplete
+
+- :black_square_button: Matching POST on client side with get new task
+  - `INSERT INTO` database
+- :black_square_button: Matching GET on client side with get all tasks
+  - :black_square_button: `SELECT` from database
+- :black_square_button: Matching PUT on client side which will update complete status of task
+  - :black_square_button: `UPDATE` to database
+- :black_square_button: Matching DELETE on client side which will delete an entire task
+  - :black_square_button: `DELETE` database
+- :black_square_button: Matching PUT on client side which will update task as incomplete
+
+- :black_square_button: Publish this app to Heroku :bangbang:**PRO**:bangbang:
+- :black_square_button: Adjust logic so completed tasks are at the bottom of the page, incomplete tasks are near the top of the page :bangbang:**PRO**:bangbang:
+- :black_square_button: Add a due date to tasks and put items still incomplete near the top of the container, oldest dates first :bangbang:**PRO**:bangbang:
+- :black_square_button: Highlighting overdue task will highlight it in red :bangbang:**PRO**:bangbang:
 
 
