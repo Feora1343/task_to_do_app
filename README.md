@@ -39,14 +39,47 @@ Breaking everything down into "less is more".
 ## What Are We Building It With?
 ```
                              
-,________,         .-------, _Request_     .---------,         .----------.
-|________|       ,'_____ ,'|  -> | ->    ,'________,'|        ( ~--------~ )
-| HTML 5 |      | JS     | |     |       | _______ | |        | ~--------~ |
-| CSS    |      | jQuery | |     |       | Node.js | |        | PostgreSQL |
-| Boot   | <--  | npm    | |     |       | Express | |        | Postico    |        
-|  strap |      | AJAX   | ;  <- | <-    | _______ | ;        | ~--------~ |
+,________,         .-------,  _Request_    .---------,         .----------.
+|________|       ,'_____ ,'|   -> | ->   ,'________,'|        ( ~--------~ )
+| HTML 5 |      | JS     | |      |      | _______ | |        | ~--------~ |
+| CSS    |      | jQuery | |      |      | Node.js | |        | PostgreSQL |
+| Boot   | <--  | npm    | |      |      | Express | |        | Postico    |        
+|  strap |      | AJAX   | ;   <- | <-   | _______ | ;        | ~--------~ |
 |________|      |________|'  _Response_  |_________|'         `.__________.'
   Client       DOM Manipulator        Server & Framework          Database
-           Front End             |           Back End              
+           *Front End*                       *Back End*              
 ```
 
+## Building Repo Tasks
+- [x] Git Repo Created
+- [x] Folder Structure Created
+- [x] npm init -y
+- [ ] Database `todo_app` created
+  - [ ] Table `tasks` created
+    ```
+    | id            | description   | complete  | date_created      | category_id       |
+    | (primary key) |               | (def. no) | (date when added) | (ref. cat. table) |
+    |:-------------:|:-------------:|:---------:|:-----------------:|:-----------------:|
+    |       1       |  Prime Class  |  Yes      |  02/15/18         | INSERT INTO cat   |
+    |       2       |  Eat Dinner   |  No       |  02/15/18         | (pri) VALUES ('') |
+    ```
+  - [ ] Table `categories` created *HARD*
+    ```
+    | id            | priority      |
+    | (primary key) | (low med hi)  |
+    |:-------------:|:-------------:|
+    |      1        |  high         |
+    |      2        |  low          |
+    ```
+  -  [ ] Both tables work together as needed *HARD*
+
+## Tasks
+- [ ] Create overall organization of DOM
+  - [ ] There will need to be input fields for adding tasks
+  - [ ] There will need to be a container to hold tasks
+  - [ ] There will need to be another container to hold tasks that are complete
+  - [ ] There will need to be a delete button
+    - [ ] Delete button removes task from the DOM and the database
+
+
+:black_square_button:
