@@ -55,15 +55,15 @@ Breaking everything down into "less is more".
 - :ballot_box_with_check: Folder Structure Created
 - :ballot_box_with_check: npm init -y
 - :ballot_box_with_check: Database `todo_app` created
-  - :black_square_button: Table `tasks` created
+  - :ballot_box_with_check: Table `tasks` created
     ```
-    | id            | description   | complete  | date_created      | category_id       |
+    | id            | description   | completed | date              | category_id       |
     | (primary key) |               | (def. no) | (date when added) | (ref. cat. table) |
     |:-------------:|:-------------:|:---------:|:-----------------:|:-----------------:|
     |       1       |  Prime Class  |  Yes      |  02/15/18         | INSERT INTO cat   |
     |       2       |  Eat Dinner   |  No       |  02/15/18         | (pri) VALUES ('') |
     ```
-  - :black_square_button: Table `categories` created :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
+  - :ballot_box_with_check: Table `categories` created :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
     ```
     | id            | category_id   |
     | (primary key) | (low med hi)  |
