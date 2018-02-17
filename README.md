@@ -113,7 +113,7 @@ Breaking everything down into "less is more".
 - :black_square_button: Matching PUT on client side which will update task as incomplete
 
 - :black_square_button: Publish this app to Heroku :bangbang:**PRO**:bangbang:
-- :black_square_button: Adjust logic so completed tasks are at the bottom of the page, incomplete tasks are near the top of the page :bangbang:**PRO**:bangbang:
+- :black_square_button: Adjust logic so completed tasks are at bottom of the page, incomplete tasks near the top of the page :bangbang:**PRO**:bangbang:
 - :black_square_button: Add a due date to tasks and put items still incomplete near the top of the container, oldest dates first :bangbang:**PRO**:bangbang:
 - :black_square_button: Highlighting overdue task will highlight it in red :bangbang:**PRO**:bangbang:
 
