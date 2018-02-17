@@ -51,11 +51,11 @@ Breaking everything down into "less is more".
 ```
 
 ## Building Repo Tasks
-- [x] Git Repo Created
-- [x] Folder Structure Created
-- [x] npm init -y
-- [ ] Database `todo_app` created
-  - [ ] Table `tasks` created
+- :ballot_box_with_check: Git Repo Created
+- :ballot_box_with_check: Folder Structure Created
+- :ballot_box_with_check: npm init -y
+- :ballot_box_with_check: Database `todo_app` created
+  - :black_square_button: Table `tasks` created
     ```
     | id            | description   | complete  | date_created      | category_id       |
     | (primary key) |               | (def. no) | (date when added) | (ref. cat. table) |
@@ -63,7 +63,7 @@ Breaking everything down into "less is more".
     |       1       |  Prime Class  |  Yes      |  02/15/18         | INSERT INTO cat   |
     |       2       |  Eat Dinner   |  No       |  02/15/18         | (pri) VALUES ('') |
     ```
-  - [ ] Table `categories` created *HARD*
+  - :black_square_button: Table `categories` created **HARD**
     ```
     | id            | priority      |
     | (primary key) | (low med hi)  |
@@ -71,15 +71,14 @@ Breaking everything down into "less is more".
     |      1        |  high         |
     |      2        |  low          |
     ```
-  -  [ ] Both tables work together as needed *HARD*
+  - :black_square_button: Both tables work together as needed **HARD**
 
 ## Tasks
-- [ ] Create overall organization of DOM
-  - [ ] There will need to be input fields for adding tasks
-  - [ ] There will need to be a container to hold tasks
-  - [ ] There will need to be another container to hold tasks that are complete
-  - [ ] There will need to be a delete button
-    - [ ] Delete button removes task from the DOM and the database
+- :black_square_button: Create overall organization of DOM
+  - :black_square_button: There will need to be input fields for adding tasks
+  - :black_square_button: There will need to be a container to hold tasks
+  - :black_square_button: There will need to be another container to hold tasks that are complete
+  - :black_square_button: There will need to be a delete button
+    - :black_square_button: Delete button removes task from the DOM and the database
 
 
-:black_square_button:
