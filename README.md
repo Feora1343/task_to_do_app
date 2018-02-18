@@ -57,8 +57,8 @@ Breaking everything down into "less is more".
 - :ballot_box_with_check: Database `todo_app` created
   - :ballot_box_with_check: Table `tasks` created
     ```
-    | id            | description   | completed | date              | category_id       |
-    | (primary key) |               | (def. no) | (date when added) | (ref. cat. table) |
+    | id            | description   | completed | date due          | category_id       |
+    | (primary key) |               | (def. no) | (date when due)   | (ref. cat. table) |
     |:-------------:|:-------------:|:---------:|:-----------------:|:-----------------:|
     |       1       |  Prime Class  |  Yes      |  02/15/18         | INSERT INTO cat   |
     |       2       |  Eat Dinner   |  No       |  02/15/18         | (pri) VALUES ('') |
@@ -74,13 +74,13 @@ Breaking everything down into "less is more".
   - :black_square_button: Both tables work together as needed :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
 
 ## Tasks
-- :black_square_button: Create overall organization of DOM
-  - :black_square_button: There will need to be input fields for adding tasks
-  - :black_square_button: There will need to be a container to hold tasks
-  - :black_square_button: There will need to be another container to hold tasks that are complete
-  - :black_square_button: There will need to be a delete button
+- :ballot_box_with_check: Create overall organization of DOM
+  - :ballot_box_with_check: There will need to be input fields for adding tasks
+  - :ballot_box_with_check: There will need to be a container to hold tasks
+  - :ballot_box_with_check: There will need to be another container to hold tasks that are complete
+  - :ballot_box_with_check: There will need to be a delete button
     - :black_square_button: Delete button removes task from the DOM and the database
-  - :black_square_button: There will need to be a complete button 
+  - :ballot_box_with_check: There will need to be a complete button 
     - :black_square_button: There will also need to be a remove completed tasks button
 
 - :black_square_button: AJAX POST sends new task to database
@@ -116,6 +116,3 @@ Breaking everything down into "less is more".
 - :black_square_button: Adjust logic so completed tasks are at bottom of the page, incomplete tasks near the top of the page :bangbang:**PRO**:bangbang:
 - :black_square_button: Add a due date to tasks and put items still incomplete near the top of the container, oldest dates first :bangbang:**PRO**:bangbang:
 - :black_square_button: Highlighting overdue task will highlight it in red :bangbang:**PRO**:bangbang:
-
-# Design Inspiration For Project
-![Inspiration](https://cdn.dribbble.com/users/374494/screenshots/3156085/to-do_app.png)

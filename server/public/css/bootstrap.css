@@ -594,13 +594,9 @@ pre code {
 }
 
 .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
 }
 
 .no-gutters {
@@ -1110,10 +1106,10 @@ pre code {
     max-width: 41.666667%;
   }
   .col-md-6 {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    position:relative; 
   }
   .col-md-7 {
     -webkit-box-flex: 0;
@@ -3733,7 +3729,6 @@ tbody.collapse.show {
   border-radius: 0.25rem;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
 }
 
 .custom-select:focus {
@@ -4782,6 +4777,18 @@ tbody.collapse.show {
   border-color: #dee2e6;
 }
 
+.pagination>li>a, .pagination>li>span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
 .pagination-lg .page-link {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -4797,8 +4804,31 @@ tbody.collapse.show {
   border-top-right-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
 }
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
 
-.pagination-sm .page-link {
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+/*!.pagination-sm .page-link {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4812,7 +4842,7 @@ tbody.collapse.show {
 .pagination-sm .page-item:last-child .page-link {
   border-top-right-radius: 0.2rem;
   border-bottom-right-radius: 0.2rem;
-}
+} */
 
 .badge {
   display: inline-block;
