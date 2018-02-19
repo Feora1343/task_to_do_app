@@ -36,8 +36,8 @@ router.get('/categories', (req, res) => {
 
 // Now we post the task to your new home!
 router.post('/', (req, res) => {
-    const queryText = 'INSERT INTO tasks (description, category_id) VALUES($1, $2)';
-    pool.query(queryText,[req.body.description, req.body.categoryId])
+    const queryText = 'INSERT INTO tasks (description, category_id, due_date) VALUES($1, $2, $3)';
+    pool.query(queryText,[req.body.description, req.body.categoryId, req.body.due_date])
         // Talk to me on the server if successful
         .then((result) => {
             console.log(result.rows)

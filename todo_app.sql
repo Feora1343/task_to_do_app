@@ -13,4 +13,6 @@ INSERT INTO categories (description)
 VALUES ('Low Priority'), ('Medium Priority'), ('High Priority');
 
 INSERT INTO tasks (description, category_id, due_date) 
-VALUES ('Class at Prime', 3, '02/19/18'), ('Lunch', 2, '02/19/18'), ('Dinner', 1, '02/19/18'), ('Homework Assignment', 3, '02/19/18'), ('Ready Alarms For Tomorrow', 2, '02/19/18'), ('Sleep', 3, '02/19/18');
+VALUES ('Class at Prime', 3, '02/19/18'), ('Homework Assignment', 3, '02/19/18'), ('Sleep', 3, '02/19/18');
+
+

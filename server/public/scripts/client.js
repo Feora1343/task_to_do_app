@@ -83,7 +83,7 @@ function displayAllTasks(tasks) {
         if(task.complete != true) {
             $('#taskList').prepend(`<li class="todo-list" data-id="${task.id}">
             <i class="fa fa-calendar"></i><span class="task-description">${task.description}</span>
-            <i class="fa fa-clock"></i><span class="task-due-date">${task.due_date}</span>
+            <i class="fa fa-clock"></i><span class="due-date">${task.due_date}</span>
             <div class="tools"><span id="edit"><i class="fa fa-edit"></i></span>
             <span id="complete"><i class="fa fa-check"></i></span>
             <span id="delete"><i class="fa fa-trash-alt"></i></span></div>
@@ -98,11 +98,11 @@ function displayAllTasks(tasks) {
 function addTask() {
     let taskToSend = {
         description: $('#taskDescription').val(),
-        dueDate: $('#dueDate').val(),
+        due_date: $('#dueDate').val(),
         categoryId: $('#categorySelect').val()
     };
 
-    if(taskToSend.description != '') {
+    if(taskToSend.description != '' && taskToSend.dueDate !='') {
         $.ajax({
             method: 'POST',
             url: '/tasks',
@@ -116,7 +116,7 @@ function addTask() {
             }
         });
     } else {
-        alert('Please enter a task description');
+        alert('Please enter a task description and due date.');
     }
 } // end addTask
 
