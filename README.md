@@ -67,7 +67,7 @@ Breaking everything down into "less is more".
   - :ballot_box_with_check: Clicking Delete Button will run the function to refresh the task list
 - :ballot_box_with_check: AJAX PUT will update the task in the data as incomplete
 
-- :black_square_button: Matching POST on client side with get new task
+- :ballot_box_with_check: Matching POST on client side with get new task
   - `INSERT INTO` database
 - :ballot_box_with_check: Matching GET on client side with get all tasks
   - :ballot_box_with_check: `SELECT` from database
