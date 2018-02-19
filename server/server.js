@@ -10,7 +10,7 @@ app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 // The Fellowship leaves Rivendale.
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // The Fellowship is forced to go into the Mines of Moria
 app.use('/tasks', tasksRouter);
