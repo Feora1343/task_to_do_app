@@ -102,7 +102,11 @@ function addTask() {
         categoryId: $('#categorySelect').val()
     };
 
-    if(taskToSend.description != '' && taskToSend.dueDate !='') {
+    if(taskToSend.description != '' && taskToSend.due_date !='') {
+        console.log(taskToSend.description);
+        console.log(taskToSend.due_date);
+        
+        
         $.ajax({
             method: 'POST',
             url: '/tasks',
