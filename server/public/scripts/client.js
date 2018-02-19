@@ -15,7 +15,7 @@ function toDoApp() {
     // Listen carefully for Nazgul.
     $('#addTaskButton').on('click', addTask);
     $('#taskList').on('click', '.completeButton', completeTask);
-    $('#taskList, #completeTasks').on('click', '.deleteButton', deleteTask);
+    $('#taskList').on('click', '.deleteButton', deleteTask);
 
     // Can't continue without Frodo.
     $('#submitTaskForm').submit(function(e){
@@ -84,9 +84,9 @@ function displayAllTasks(tasks) {
             $('#taskList').prepend(`<li class="todo-list" data-id="${task.id}">
             <i class="fa fa-calendar"></i><span class="task-description">${task.description}</span>
             <i class="fa fa-clock"></i><span class="due-date">${task.due_date}</span>
-            <div class="tools"><span id="edit"><i class="fa fa-edit"></i></span>
-            <span id="complete"><i class="fa fa-check"></i></span>
-            <span id="delete"><i class="fa fa-trash-alt"></i></span></div>
+            <div class="tools"><span onclick="editButton"><i class="fa fa-edit"></i></span>
+            <span class="completeButton"><i class="fa fa-check"></i></span>
+            <span class="deleteButton"><i class="fa fa-trash-alt"></i></span></div>
             <div class="category-text">${categoryText}</div></li>`); 
         } else {
             $('#completedTasks').prepend(`<li class="complete-list" data-id="${task.id}"><i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span><div class="tools"><span id="delete"><i class="fa fa-trash-alt"></i></span></li>`);
@@ -123,7 +123,7 @@ function addTask() {
 // The One Ring is destroyed!
 function completeTask() {
     console.log('Inside completeTask');
-    let currentTaskId = $(this).parents('.task-item').data('id');
+    let currentTaskId = $(this).parents('.todo-list').data('id');
     $.ajax({
         method: 'PUT',
         url: '/tasks/complete/' + currentTaskId,
@@ -136,7 +136,9 @@ function completeTask() {
 // THE PRECIOUS IS LOST!
 function deleteTask() {
     console.log('Inside deleteTask');
-    let currentTaskId = $(this).parents('.task-item').data('id');
+    let currentTaskId = $(this).parents('.todo-list').data('id');
+    console.log($(this));
+    
     $.ajax({
         method: 'DELETE',
         url: '/tasks/' + currentTaskId,
