@@ -137,13 +137,18 @@ function completeTask() {
 function deleteTask() {
     console.log('Inside deleteTask');
     let currentTaskId = $(this).parents('.todo-list').data('id');
+    if (confirm("Are you sure you want to delete this?")) {
+        $.ajax({
+            method: 'DELETE',
+            url: '/tasks/' + currentTaskId,
+            success: function(response) {
+                getTasks();
+            }
+        });
+    }
+    return false;
+
     console.log($(this));
     
-    $.ajax({
-        method: 'DELETE',
-        url: '/tasks/' + currentTaskId,
-        success: function(response) {
-            getTasks();
-        }
-    });
+    
 } // rip deleteTask

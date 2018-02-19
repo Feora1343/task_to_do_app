@@ -63,9 +63,9 @@ Breaking everything down into "less is more".
   - :black_square_button: Clicking Complete Button will also move the completed task to the completed task list & hide the complete button on that task
 - :ballot_box_with_check: AJAX DELETE deletes the task in the database
   - :ballot_box_with_check: Clicking Delete Button will remove the task from the database
-  - :black_square_button: BUT will warn you, asking if you are sure you want to delete this task :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
-  - :black_square_button: Clicking Delete Button will run the function to refresh the task list
-- :black_square_button: AJAX PUT will update the task in the data as incomplete
+  - :ballot_box_with_check: BUT will warn you, asking if you are sure you want to delete this task :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
+  - :ballot_box_with_check: Clicking Delete Button will run the function to refresh the task list
+- :ballot_box_with_check: AJAX PUT will update the task in the data as incomplete
 
 - :black_square_button: Matching POST on client side with get new task
   - `INSERT INTO` database
