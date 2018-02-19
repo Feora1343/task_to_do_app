@@ -15,13 +15,20 @@ function toDoApp() {
     // Listen carefully for Nazgul.
     $('#addTaskButton').on('click', addTask);
     $('#taskList').on('click', '.completeButton', completeTask);
-    $('#taskList').on('click', '.deleteButton', deleteTask);
+    $('#taskList, #completedList').on('click', '.deleteButton', deleteTask);
 
     // Can't continue without Frodo.
     $('#submitTaskForm').submit(function(e){
         e.preventDefault();
     });
 } // rip toDoApp
+
+//How many hobbits were in the fellowship?
+function countTasks() {
+    // Count in progress and completed tasks
+    let inprogressCount= ($('#taskList li').length).toString();
+    let completedCount= ($('#completedTasks li').length).toString();
+} // end countTasks
 
 // PLAYER AJAX JOINS THE GAME
 // AJAX GETS /TASKS!
@@ -34,6 +41,7 @@ function getTasks() {
         url: '/tasks',
         success: function(response){
             displayAllTasks(response);
+            countTasks(response);
         }
     });
 } // rip getTasks
@@ -65,7 +73,7 @@ function displayCategories(categories) {
 function displayAllTasks(tasks) {
     console.log('Inside displayAllTasks');
     $('#taskList').empty();
-    $('#completedTasks').empty();
+    $('#completedList').empty();
     // Loopin' through to get the values for the category
     for (let i = 0; i < tasks.length; i++) {
         const task = tasks[i];
@@ -89,7 +97,10 @@ function displayAllTasks(tasks) {
             <span class="deleteButton"><i class="fa fa-trash-alt"></i></span></div>
             <div class="category-text">${categoryText}</div></li>`); 
         } else {
-            $('#completedTasks').prepend(`<li class="complete-list" data-id="${task.id}"><i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span><div class="tools"><span id="delete"><i class="fa fa-trash-alt"></i></span></li>`);
+            $('#completedList').prepend(`<li class="todo-list" data-id="${task.id}">
+            <i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span>
+            <div class="tools"><span id="delete"><i class="fa fa-trash-alt"></i></span>
+            <div class="category-text">${categoryText}</div></li>`);
         }
     }
 } // end displayAllTasks
@@ -147,8 +158,5 @@ function deleteTask() {
         });
     }
     return false;
-
     console.log($(this));
-    
-    
 } // rip deleteTask
