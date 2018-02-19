@@ -83,34 +83,34 @@ Breaking everything down into "less is more".
   - :ballot_box_with_check: There will need to be a complete button 
     - :black_square_button: There will also need to be a remove completed tasks button
 
-- :black_square_button: AJAX POST sends new task to database
-  - :black_square_button: Clicking Add Task button sends value of input to databae
-  - :black_square_button: Clicking Add Task also runs function to refresh list/update
-- :black_square_button: AJAX GET requests tasks from the database
-  - :black_square_button: When page loads, it should always get tasks from database
-  - :black_square_button: JS Loop will be needed to create the list of tasks
-  - :black_square_button: Each task needs to have a complete and delete button
-    - :black_square_button: Each complete and delete button needs event listener
-- :black_square_button: AJAX PUT updates the tasks in the database as complete
-  - :black_square_button: The element will need a `data-id`
+- :ballot_box_with_check: AJAX POST sends new task to database
+  - :ballot_box_with_check: Clicking Add Task button sends value of input to database
+  - :ballot_box_with_check: Clicking Add Task also runs function to refresh list/update
+- :ballot_box_with_check: AJAX GET requests tasks from the database
+  - :ballot_box_with_check: When page loads, it should always get tasks from database
+  - :ballot_box_with_check: JS Loop will be needed to create the list of tasks
+  - :ballot_box_with_check: Each task needs to have a complete and delete button
+    - :ballot_box_with_check: Each complete and delete button needs event listener
+- :ballot_box_with_check: AJAX PUT updates the tasks in the database as complete
+  - :ballot_box_with_check: The element will need a `data-id`
   - :black_square_button: Clicking Complete Button will update the database
   - :black_square_button: Clicking Complete Button will also run function to refresh the tasks list
   - :black_square_button: Clicking Complete Button will also move the completed task to the completed task list & hide the complete button on that task
-- :black_square_button: AJAX DELETE deletes the task in the database
+- :ballot_box_with_check: AJAX DELETE deletes the task in the database
   - :black_square_button: Clicking Delete Button will remove the task from the database
   - :black_square_button: BUT will warn you, asking if you are sure you want to delete this task :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
-  - :black_square_button: Clicking Delete Butotn will run the function to refresh the task list
+  - :black_square_button: Clicking Delete Button will run the function to refresh the task list
 - :black_square_button: AJAX PUT will update the task in the data as incomplete
 
 - :black_square_button: Matching POST on client side with get new task
   - `INSERT INTO` database
-- :black_square_button: Matching GET on client side with get all tasks
+- :ballot_box_with_check: Matching GET on client side with get all tasks
   - :black_square_button: `SELECT` from database
-- :black_square_button: Matching PUT on client side which will update complete status of task
+- :ballot_box_with_check: Matching PUT on client side which will update complete status of task
   - :black_square_button: `UPDATE` to database
-- :black_square_button: Matching DELETE on client side which will delete an entire task
+- :ballot_box_with_check: Matching DELETE on client side which will delete an entire task
   - :black_square_button: `DELETE` database
-- :black_square_button: Matching PUT on client side which will update task as incomplete
+- :ballot_box_with_check: Matching PUT on client side which will update task as incomplete
 
 - :black_square_button: Publish this app to Heroku :bangbang:**PRO**:bangbang:
 - :black_square_button: Adjust logic so completed tasks are at bottom of the page, incomplete tasks near the top of the page :bangbang:**PRO**:bangbang:

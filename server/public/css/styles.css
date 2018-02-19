@@ -18,8 +18,8 @@ body{
     background: #ffffff;
     border-top: 3px solid #d2d6de;
     margin-bottom: 20px;
-    width: 50%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+
 }
 .box-header {
     color: #444;
@@ -114,6 +114,7 @@ body{
     border-top: 1px solid #f4f4f4;
     padding: 10px;
     background-color: #fff;
+    color: #444;
 }
 .btn-addtask {
     background-color: #f4f4f4;
@@ -153,8 +154,12 @@ body{
 #delete {
     cursor: pointer;
    }
+   
+#complete {
+    cursor: pointer;
+   }
 
-   input {
+input.task-input {
     width: 50%;
     border: none;
     background: rgba(255,255,255,.1);
@@ -162,7 +167,18 @@ body{
     padding: 5px;
     box-sizing: border-box;
     font: 300 24px 'Lato', sans-serif;
-    color: #ffffff;
+    color: #000000;
+}
+
+input.dueDate {
+    width: 25%;
+    border: none;
+    background: rgba(255,255,255,.1);
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    font: 300 24px 'Lato', sans-serif;
+    color: #000000;
 }
 
 category-select {
@@ -177,3 +193,7 @@ category-select {
     font: 300 24px 'Georgia';
     color: #ffffff;
  }
+
+ .show-inputbtns .input-buttons {
+    display: inline-block;
+}

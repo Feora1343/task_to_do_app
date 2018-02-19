@@ -9,7 +9,7 @@
     <script src="vendors/jquery.js" charset="utf-8"></script>
     <script src="scripts/bootstrap.js" charset="utf-8"></script>
     <script src="scripts/client.js" charset="utf-8"></script>
-    <title>Weekend Challenge 3 To Do Task List</title>
+    <title>Weekend Challenge 3 To Do App</title>
   </head>
   <body>
       <div class="row">
@@ -17,93 +17,17 @@
             <div class="box box-aqua">
               <div class="box-header ui-sortable-handle">
                 <i class="fa fa-clipboard"></i>
-                <h3 class="box-title">To Do List</h3>
-                <!-- Extra Idea For Handling Multiple Items Via Pages
-                <div class="box-tools pull-right" style="cursor: pointer;">
-                  <ul class="pagination pagination-sm inline">
-                    <li><a href="#">«</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">»</a></li>
-                  </ul>
+                <h3 class="box-title">To Do</h3>
                 </div>
-                End Extra Idea -->
-              </div>
-              <div class="box-body">
-                <ul class="todo-list ui-sortable">
-                  <li>
-                    <span class="handle ui-sortable-handle">
-                        <i class="fa fa-calendar"></i>
-                    </span>
-                    <span class="text">Task 1</span>
-                    <small class="label label-danger"><i class="fa fa-clock"></i> Due Date</small>
-                    <div class="tools">
-                      <span id="edit"><i class="fa fa-edit"></i></span>
-                      <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="handle ui-sortable-handle">
-                      <i class="fa fa-calendar"></i>
-                    </span>
-                    <span class="text">Task 2</span>
-                    <small class="label label-info"><i class="fa fa-clock"></i> Due Date</small>
-                    <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="handle ui-sortable-handle">
-                        <i class="fa fa-calendar"></i>
-                    </span>
-                    <span class="text">Task 3</span>
-                    <small class="label label-warning"><i class="fa fa-clock"></i> Due Date</small>
-                    <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="handle ui-sortable-handle">
-                        <i class="fa fa-calendar"></i>
-                    </span>
-                    <span class="text">Task 4</span>
-                    <small class="label label-success"><i class="fa fa-clock"></i> Due Date</small>
-                    <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="handle ui-sortable-handle">
-                        <i class="fa fa-calendar"></i>
-                    </span>
-                    <span class="text">Task 5</span>
-                    <small class="label label-primary"><i class="fa fa-clock"></i> Due Date</small>
-                    <div class="tools">
-                      <span id="edit"><i class="fa fa-edit"></i></span>
-                      <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                    </div>
-                  </li>
-                  <li>
-                    <span class="handle ui-sortable-handle">
-                        <i class="fa fa-calendar"></i>
-                    </span>
-                    <span class="text">Task 6</span>
-                    <small class="label label-default"><i class="fa fa-clock"></i> Due Date</small>
-                    <div class="tools">
-                      <span id="edit"><i class="fa fa-edit"></i></span>
-                      <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                    </div>
-                  </li>
+              <div class="box-body" id="opentasks">
+                <ul id="taskList" class="todo-list">
                 </ul>
               </div>
               <div class="box-footer clearfix no-border">
               <input type="text" id="taskDescription" class="task-input" placeholder="Enter your task">
-              <select id="Select" class="priority-select"></select>
-              <button type="button" class="btn btn-addtask pull-right" ><i class="fa fa-plus"></i> Add item</button>
+              <input type="date" id="dueDate" class="date-input">
+              <select id="categorySelect" class="category-select"></select>
+              <button type="button" id="addTaskButton" class="btn addTaskButton pull-right" ><i class="fa fa-plus"></i> Add item</button>
               </div>
             </div>
           </div>
@@ -114,80 +38,9 @@
                 <div class="box-header ui-sortable-handle">
                   <i class="fa fa-clipboard"></i>
                   <h3 class="box-title">Completed List</h3>
-                  <!-- Extra Idea For Handling Multiple Items Via Pages
-                  <div class="box-tools pull-right" style="cursor: pointer;">
-                    <ul class="pagination pagination-sm inline">
-                      <li><a href="#">«</a></li>
-                      <li><a href="#">1</a></li>
-                      <li><a href="#">2</a></li>
-                      <li><a href="#">3</a></li>
-                      <li><a href="#">»</a></li>
-                    </ul>
-                  </div>
-                  End Extra Idea --> 
-                </div>      
-                <div class="box-body">
-                  <ul class="complete-list ui-sortable">
-                    <li>
-                      <span class="handle ui-sortable-handle">
-                        <i class="fa fa-calendar-check"></i>
-                      </span>
-                      <span class="text">Complete 1</span>
-                      <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
                       </div>
-                    </li>
-                    <li>
-                      <span class="handle ui-sortable-handle">
-                          <i class="fa fa-calendar-check"></i>
-                      </span>
-                      <span class="text">Complete 2</span>
-                      <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                      </div>
-                    </li>
-                    <li>
-                      <span class="handle ui-sortable-handle">
-                          <i class="fa fa-calendar-check"></i>
-                      </span>
-                      <span class="text">Complete 3</span>
-                      <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                      </div>
-                    </li>
-                    <li>
-                      <span class="handle ui-sortable-handle">
-                          <i class="fa fa-calendar-check"></i>
-                      </span>
-                      <span class="text">Complete 4</span>
-                      <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                      </div>
-                    </li>
-                    <li>
-                      <span class="handle ui-sortable-handle">
-                          <i class="fa fa-calendar-check"></i>
-                      </span>
-                      <span class="text">Complete 5</span>
-                      <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                      </div>
-                    </li>
-                    <li>
-                      <span class="handle ui-sortable-handle">
-                          <i class="fa fa-calendar-check"></i>
-                      </span>
-                      <span class="text">Complete 6</span>
-                      <div class="tools">
-                        <span id="edit"><i class="fa fa-edit"></i></span>
-                        <span id="delete"><i class="fa fa-trash-alt"></i></span>
-                      </div>
-                    </li>
+                <div class="box-body" id="completedtasks">
+                  <ul id="complete-list ui-sortable">
                   </ul>
                 </div>
                 <div class="box-footer clearfix no-border">
