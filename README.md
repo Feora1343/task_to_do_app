@@ -36,7 +36,7 @@ Breaking everything down into "less is more".
     |      1        |  high         |
     |      2        |  low          |
     ```
-  - :black_square_button: Both tables work together as needed :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
+  - :ballot_box_with_check: Both tables work together as needed :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
 
 ## Tasks
 - :ballot_box_with_check: Create overall organization of DOM
