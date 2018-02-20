@@ -90,7 +90,7 @@ function displayAllTasks(tasks) {
             <div class="category-text">${categoryText}</div></li>`); 
         } else {
             $('#completedTasks').prepend(`<li class="todo-list" data-id="${task.id}">
-            <i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span>
+            <i class="fa fa-calendar-check"></i><span class="task-description">${task.description}</span>
             <div class="tools"><span class="deleteButton"><i class="fa fa-trash-alt"></i></span></li>`);
         }
     }
