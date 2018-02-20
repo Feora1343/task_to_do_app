@@ -83,13 +83,14 @@ function displayAllTasks(tasks) {
         if(task.complete != true) {
             $('#taskList').prepend(`<li class="todo-list" data-id="${task.id}">
             <i class="fa fa-calendar"></i><span class="task-description">${task.description}</span>
-            <i class="fa fa-clock"></i><span class="due-date">${task.due_date}</span>
+            <i class="fa fa-clock"></i><span class="due-date">${task.due_date.substring(0, 10)}</span>
             <div class="tools"><span onclick="editButton"><i class="fa fa-edit"></i></span>
             <span class="completeButton"><i class="fa fa-check"></i></span>
             <span class="deleteButton"><i class="fa fa-trash-alt"></i></span></div>
             <div class="category-text">${categoryText}</div></li>`); 
         } else {
-            $('#completedTasks').prepend(`<li class="complete-list" data-id="${task.id}"><i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span><div class="tools"><span id="delete"><i class="fa fa-trash-alt"></i></span></li>`);
+            $('#completedTasks').prepend(`<li class="complete-list" data-id="${task.id}">
+            <i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span><div class="tools"><span id="delete"><i class="fa fa-trash-alt"></i></span></li>`);
         }
     }
 } // end displayAllTasks
