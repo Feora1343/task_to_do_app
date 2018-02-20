@@ -60,7 +60,7 @@ Breaking everything down into "less is more".
   - :ballot_box_with_check: The element will need a `data-id`
   - :ballot_box_with_check: Clicking Complete Button will update the database
   - :ballot_box_with_check: Clicking Complete Button will also run function to refresh the tasks list
-  - :black_square_button: Clicking Complete Button will also move the completed task to the completed task list & hide the complete button on that task
+  - :ballot_box_with_check: Clicking Complete Button will also move the completed task to the completed task list & hide the complete button on that task
 - :ballot_box_with_check: AJAX DELETE deletes the task in the database
   - :ballot_box_with_check: Clicking Delete Button will remove the task from the database
   - :ballot_box_with_check: BUT will warn you, asking if you are sure you want to delete this task :heavy_exclamation_mark:**HARD**:heavy_exclamation_mark:
@@ -77,10 +77,10 @@ Breaking everything down into "less is more".
   - :ballot_box_with_check: `DELETE` database
 - :ballot_box_with_check: Matching PUT on client side which will update task as incomplete
 
-- :black_square_button: Publish this app to Heroku :bangbang:**PRO**:bangbang:
-- :black_square_button: Adjust logic so completed tasks are at bottom of the page, incomplete tasks near the top of the page :bangbang:**PRO**:bangbang:
+- :ballot_box_with_check: Publish this app to Heroku :bangbang:**PRO**:bangbang:
+- :ballot_box_with_check: Adjust logic so completed tasks are at bottom of the page, incomplete tasks near the top of the page :bangbang:**PRO**:bangbang:
 - :ballot_box_with_check: Add a due date to tasks and put items still incomplete near the top of the container, oldest dates first **I decided to sort by priority instead of date** :bangbang:**PRO**:bangbang:
-- :black_square_button: Highlighting overdue task will highlight it in red **I decided to make this move to a completed list section to serve as an indicator** :bangbang:**PRO**:bangbang:
+- :ballot_box_with_check: Highlighting overdue task will highlight it in red **I decided to make this move to a completed list section to serve as an indicator** :bangbang:**PRO**:bangbang:
 
 # To Do App
 Hello Primers!
