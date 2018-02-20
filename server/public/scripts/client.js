@@ -15,7 +15,7 @@ function toDoApp() {
     // Listen carefully for Nazgul.
     $('#addTaskButton').on('click', addTask);
     $('#taskList').on('click', '.completeButton', completeTask);
-    $('#taskList').on('click', '.deleteButton', deleteTask);
+    $('#taskList, #completedTasks').on('click', '.deleteButton', deleteTask);
 
     // Can't continue without Frodo.
     $('#submitTaskForm').submit(function(e){
@@ -90,7 +90,8 @@ function displayAllTasks(tasks) {
             <div class="category-text">${categoryText}</div></li>`); 
         } else {
             $('#completedTasks').prepend(`<li class="complete-list" data-id="${task.id}">
-            <i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span><div class="tools"><span id="delete"><i class="fa fa-trash-alt"></i></span></li>`);
+            <i class="fa fa-calendar-check"></i><span class="task-description">${tasks.description}</span>
+            <div class="tools"><span class="deleteButton"><i class="fa fa-trash-alt"></i></span></li>`);
         }
     }
 } // end displayAllTasks
