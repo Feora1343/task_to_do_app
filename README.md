@@ -1,6 +1,8 @@
 # Project Planning and Management
 Breaking everything down into "less is more".
 
+[Also please feel free to check out the app on heroku.](https://polar-peak-57120.herokuapp.com/)
+
 ## What Are We Building It With?
 ```
                              
