@@ -1,20 +1,14 @@
-# Project Planning and Management
-Breaking everything down into "less is more".
-
-[Also please feel free to check out the app on heroku.](https://polar-peak-57120.herokuapp.com/)
-
 ## What Are We Building It With?
-```
-                             
+```                          
 ,________,         .-------,  _Request_    .---------,         .----------.
 |________|       ,'_____ ,'|   -> | ->   ,'________,'|        ( ~--------~ )
 | HTML 5 |      | JS     | |      |      | _______ | |        | ~--------~ |
 | CSS    |      | jQuery | |      |      | Node.js | |        | PostgreSQL |
-| Boot   | <--  | npm    | |      |      | Express | |        | Postico    |        
-|  strap |      | AJAX   | ;   <- | <-   | _______ | ;        | ~--------~ |
+| Boot   | <--  |        | |      |      | Express | |        | Postico    |        
+|  strap |      |        | ;   <- | <-   | _______ | ;        | ~--------~ |
 |________|      |________|'  _Response_  |_________|'         `.__________.'
-  Client       DOM Manipulator        Server & Framework          Database
-           *Front End*                       *Back End*              
+  Client        Client Logic                Server               Database
+        *Front End*                                  *Back End*              
 ```
 
 ## Building Repo Tasks
